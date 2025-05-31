@@ -75,10 +75,3 @@ Then visit:
 http://127.0.0.1:8000/api/note/
 
 ---
-
-After pasting this, commit and push:
-
-```bash
-git add README.md
-git commit -m "Fix: cleaned up README formatting"
-git push
