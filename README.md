@@ -29,21 +29,17 @@ Implements full CRUD functionality with model-backed endpoints, tested via Postm
   "body": "This is certainly noteworthy"
 }
 
-Requirements
-Python 3.10+
+## Requirements
 
-Django 5.2.1
-
-django-tastypie
+- Python 3.10+
+- Django 5.2.1
+- django-tastypie
 
 Install all dependencies with:
 
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
 
-Setup Instructions
 # Clone the repo
 git clone https://github.com/MartelV/DjangoTastyPieAPI.git
 cd DjangoTastyPieAPI
