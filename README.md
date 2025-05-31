@@ -28,6 +28,7 @@ Implements full CRUD functionality with model-backed endpoints, tested via Postm
   "title": "First Note",
   "body": "This is certainly noteworthy"
 }
+```
 
 ## Requirements
 
@@ -39,26 +40,45 @@ Install all dependencies with:
 
 ```bash
 pip install -r requirements.txt
+```
 
-# Clone the repo
+## Setup Instructions
+
+## Clone the Repo
+```
 git clone https://github.com/MartelV/DjangoTastyPieAPI.git
 cd DjangoTastyPieAPI
-
-# Set up virtual environment
+```
+## Set Up Virtual Environment
+```
 python -m venv env
 source env/bin/activate  # On Windows: .\env\Scripts\activate
-
-# Install requirements
+```
+## Install Requirements
+```
 pip install -r requirements.txt
-
-# Apply migrations
+```
+## Apply Migrations
+```
 python manage.py migrate
+```
 
-# (Optional) Create admin user
+## (Optional) Create Admin User
+```
 python manage.py createsuperuser
-
-# Run the server
+```
+## Run the Server
+```
 python manage.py runserver
-
+```
 Then visit:
-📍 http://127.0.0.1:8000/api/note/
+http://127.0.0.1:8000/api/note/
+
+---
+
+After pasting this, commit and push:
+
+```bash
+git add README.md
+git commit -m "Fix: cleaned up README formatting"
+git push
