@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Notes</title></head>
+<body>
+  <h2>My Notes</h2>
+  <p>Logged in as <strong>{{ request.user.username }}</strong> | <a href="/logout/">Logout</a></p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Title" required><br><br>
+    <textarea name="body" placeholder="Note body" required></textarea><br><br>
+    <button type="submit">Add Note</button>
+  </form>
+
+  <hr>
+
+  {% for note in notes %}
+    <div>
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.body }}</p>
+      <small>{{ note.created_at }}</small> |
+      <a href="/delete/{{ note.id }}/">Delete</a>
+    </div>
+    <hr>
+  {% empty %}
+    <p>No notes yet. Add one above!</p>
+  {% endfor %}
+</body>
+</html>
