@@ -1,77 +1,38 @@
 # Notable Django API
 
-A Django + TastyPie REST API for managing notes, inspired by Google Keep.  
-Implements full CRUD functionality with model-backed endpoints, tested via Postman.
+A full-stack Django + TastyPie note-taking app inspired by Google Keep.
+Built with user authentication, per-user note management, and a REST API backend.
 
 ## Features
+- User registration, login, and logout
+- Notes are private per user
+- Full CRUD via both web UI and REST API
+- TastyPie REST API endpoints
+- Admin dashboard
 
-- Django ORM for data modeling
-- TastyPie for RESTful API endpoints
-- Fully working CRUD: Create, Read, Update, Delete
-- Postman tested
-- Admin dashboard enabled
+## REST API Endpoints
+| Method | URL | Description |
+|--------|-----|-------------|
+| GET | `/api/v1/note/` | List all notes |
+| GET | `/api/v1/note/<id>/` | Get a note |
+| POST | `/api/v1/note/` | Create a note |
+| PUT | `/api/v1/note/<id>/` | Update a note |
+| DELETE | `/api/v1/note/<id>/` | Delete a note |
 
-## Endpoints
-
-| Method | URL                      | Description              |
-|--------|--------------------------|--------------------------|
-| GET    | `/api/note/`             | List all notes           |
-| GET    | `/api/note/<id>/`        | Retrieve a specific note |
-| POST   | `/api/note/`             | Create a new note        |
-| PUT    | `/api/note/<id>/`        | Update a note            |
-| DELETE | `/api/note/<id>/`        | Delete a note            |
-
-## Example JSON
-
-```json
-{
-  "title": "First Note",
-  "body": "This is certainly noteworthy"
-}
-```
-
-## Requirements
-
-- Python 3.10+
-- Django 5.2.1
+## Tech Stack
+- Python 3.12
+- Django 6.0
 - django-tastypie
+- SQLite
 
-Install all dependencies with:
-
+## Setup
 ```bash
-pip install -r requirements.txt
-```
-
-## Setup Instructions
-
-## Clone the Repo
-```
 git clone https://github.com/MartelV/DjangoTastyPieAPI.git
 cd DjangoTastyPieAPI
-```
-## Set Up Virtual Environment
-```
 python -m venv env
-source env/bin/activate  # On Windows: .\env\Scripts\activate
-```
-## Install Requirements
-```
+source env/bin/activate  # Windows: .\env\Scripts\activate
 pip install -r requirements.txt
-```
-## Apply Migrations
-```
 python manage.py migrate
-```
-
-## (Optional) Create Admin User
-```
-python manage.py createsuperuser
-```
-## Run the Server
-```
 python manage.py runserver
 ```
-Then visit:
-http://127.0.0.1:8000/api/note/
-
----
+Then visit http://127.0.0.1:8000
